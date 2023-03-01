@@ -1,0 +1,6 @@
+controllers:
+    resource: ../src/Controller/
+    type: attribute
+artisane_rejoindre:
+    path: /rejoindre
+    controller: App\Controller\ArtisaneController::rejoindre

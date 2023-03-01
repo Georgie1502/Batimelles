@@ -1,0 +1,28 @@
+{% extends 'base.html.twig'%}
+
+{% block body %}
+<div class="container-xxl mt-4">
+<h1  class="display-3" >Rejoindre le reseau Batim'elle</h1>
+<p class="lead">Si vous êtes une femme artisane et que vous souhaitez 
+rejoindre notre réseau, n'hésitez pas à nous contacter. 
+Nous serons ravis de vous accueillir et de vous offrir tous les avantages que notre plateforme a à vous offrir.</p><br>
+
+{% for message in app.session.flashbag.get('success') %}
+    <div class="alert alert-dismissible alert-success">
+        {{ message }}
+    </div>
+{% endfor %}
+
+{% for message in app.session.flashbag.get('erreur') %}
+    <div class="alert alert-dismissible alert-danger">
+        {{ message }}
+    </div>
+   {% endfor %}
+
+<br>
+
+{{ form_start(form) }}
+{{ form_rest(form) }}
+{{ form_end(form)}}
+
+</div>

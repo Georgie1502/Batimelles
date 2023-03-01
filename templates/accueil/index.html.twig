@@ -1,0 +1,78 @@
+{% extends "base.html.twig" %}
+
+
+
+{% block title %}{{controller_name}}{% endblock title %}
+
+
+
+
+{% block body %}
+
+<!-- Trouver les artisanes -->
+<div class="p-5 text-center bg-image rounded-3">
+  <div class="mask" >
+    <div class="d-flex justify-content-center align-items-center h-200">
+      <div class="text-white">
+        <h1 class="mb-3">Le bâtiment par et pour les femmes!</h1>
+        <h4 class="mb-3">Trouvez une artisane près de chez vous</h4>
+        <form class="d-flex">
+            <input class="form-control me-sm-2" type="search" placeholder="Par exemple : Plomberie">
+            <button type="button" class="btn btn-success">Trouver</button>
+
+          </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!--  -->
+
+{% block selection %}
+
+
+<div class="card mb-3 mt-5">
+
+      <h3 class="card-header text-bg-secondary">Nos artisanes</h3>
+        <div class="card-body">
+          <h5 class="card-title">Menuisières </h5>
+          <h6 class="card-subtitle text-muted"> Et si vous faisiez appel à une femme menuisière ?</h6>
+        </div>
+      <img src="/asset/image/carpintera.jpg" alt="logo" width="100%" height="100%">
+      
+        <div class="card-body">
+          <p class="card-text">Elle assemble et elle monte, et, selon sa formation elle est également capable de sculpter, tourner, marqueter. La menuiserie bois est un ensemble de compétences !</p>
+        </div>
+    
+      <div class="card-body">
+        <button type="button" class="btn btn-success">Trouver une menuisière</button>
+      </div>
+      
+</div>
+<br>
+<div class="card mb-3 mt-5">
+
+  <h3 class="card-header text-bg-secondary">Nos artisanes</h3>
+    <div class="card-body">
+      <h5 class="card-title">Plombières</h5>
+      <h6 class="card-subtitle text-muted"> Et si vous faisiez appel à une femme plombière?</h6>
+    </div>
+  <img src="/asset/image/diagnostic-plomberie-immobilier.jpg" alt="logo" width="100%" height="100%">
+  
+    <div class="card-body">
+      <p class="card-text">Les travaux de plomberie incluent des réparations plus ou moins importantes, comme la recherche de fuites, la réparation de chasses d’eau et le débouchage des canalisations et des WC</p>
+    </div>
+
+  <div class="card-body">
+    <button type="button" class="btn btn-success">Trouver une plombière</button>
+  </div>
+  
+</div>
+
+{% endblock selection %}
+
+
+{% block javascripts %}
+
+{% endblock javascripts %}
+
+{% endblock %} 

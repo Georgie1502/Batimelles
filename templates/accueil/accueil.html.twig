@@ -1,0 +1,26 @@
+ {% extends "base.html.twig" %} 
+
+ {% block body %}
+    <h1>Bienvenue</h1>
+
+    <!-- Jumbotron -->
+<div class="p-5 text-center bg-image rounded-3" style="
+background-color: url('https://mdbcdn.b-cdn.net/img/new/slides/041.webp');
+height: 400px;
+">
+<div class="mask" >
+<div class="d-flex justify-content-center align-items-center h-100">
+  <div class="text-white">
+    <h1 class="mb-3">Le par et pour les femmes!</h1>
+    <h4 class="mb-3">Trouvez une artisane près de chez vous</h4>
+    <form class="d-flex">
+        <input class="form-control me-sm-2" type="search" placeholder="Par exemple : Plomberie">
+        <button type="button btn btn-success">Trouver</button>
+      </form>
+  </div>
+</div>
+</div>
+</div>
+<!-- Jumbotron -->
+ {% endblock body %}
+

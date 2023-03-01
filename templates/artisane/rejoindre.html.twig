@@ -1,0 +1,71 @@
+{% extends 'base.html.twig'%}
+
+{% block body %}
+<div class="container-xxl mt-4">
+<h1  class="display-3" >Rejoindre le reseau Batim'elle</h1>
+<p class="lead">Si vous êtes une femme artisane et que vous souhaitez 
+rejoindre notre réseau, n'hésitez pas à nous contacter. 
+Nous serons ravis de vous accueillir et de vous offrir tous les avantages que notre plateforme a à vous offrir.</p><br>
+
+{% for message in app.session.flashbag.get('success') %}
+    <div class="alert alert-dismissible alert-success">
+        {{ message }}
+    </div>
+{% endfor %}
+
+{% for message in app.session.flashbag.get('erreur') %}
+    <div class="alert alert-dismissible alert-danger">
+        {{ message }}
+    </div>
+   {% endfor %}
+
+<br>
+
+{{ form_start(form) }}
+
+    {{ form_row(form.nom,{'attr':{
+        'placeholder':'Entrez votre nom',
+        'style': 'width: 800px;'
+        }}) }}
+
+    {{ form_row(form.prenom,{'attr':{
+            'placeholder':'Entrez votre prenom',
+            'style': 'width: 800px;'
+        }}) }}
+    {{ form_row(form.telephone,{'attr':{
+            'placeholder':'Entrez votre telephone',
+            'style': 'width: 800px;'
+        }}) }}
+    {{ form_row(form.mail,{'attr':{
+            'placeholder':'Entrez votre mail',
+            'style': 'width: 800px;'
+        }}) }}
+    {{ form_row(form.password,{'attr':{
+            'placeholder':'Entrez votre password',
+            'style': 'width: 800px;'
+        }}) }}
+    {{ form_row(form.adresse,{'attr':{
+            'placeholder':'Entrez votre adresse',
+            'style': 'width: 800px;'
+        }}) }}
+    {{ form_row(form.nomEntreprise,{'attr':{
+            'placeholder':'Entrez le nom de votre entreprise',
+            'style': 'width: 800px;'
+        }}) }}
+    {{ form_row(form.aneesExperience,{'attr':{    
+            'style': 'width: 800px;'
+    }}) }}
+    {{ form_row(form.horaires,{'attr':{
+        'placeholder':'Entrez vos horaires',
+        'style': 'width: 800px;'
+    }}) }}
+    {{ form_row(form.metier,{'attr':{
+        
+        'style': 'width: 800px;'
+    }}) }}
+
+{{ form_end(form)}}
+
+</div>
+
+{% endblock body %}
