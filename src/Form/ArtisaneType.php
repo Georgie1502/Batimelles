@@ -54,11 +54,12 @@ class ArtisaneType extends AbstractType
                 'required' => true,
                 ])
             ->add('aneesExperience', DateType::class,[
+                'format' => 'dd-MM-yyyy',
                 'label'=> 'Date de creation de l\'entreprise',
                 'required' => true,
                 ])
             ->add('activation')
-            ->add('horaires', WeekType::class,[
+            ->add('horaires',TextType::class,[
                 'label'=> 'Horaires',
                 'required' => true,
                 ])
